@@ -19,7 +19,18 @@ const startups = [
     cofounders: "Emily Harris & Frank Martinez",
     imageUrl: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxTdXN0YWluYWJsZSUyMFNvbHV0aW9ucyUyMHN0YXJ0dXB8ZW58MHx8fHwxNzA5ODIzOTY5fDA&ixlib=rb-4.0.3&q=80&w=1080",
   },
-  // Add more startups here
+  {
+    name: "Steep.app",
+    cofounders: "Sam Rodgers & Taylor Brooks",
+    imageUrl: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxzdGVlcC5hcHB8ZW58MHx8fHwxNzA5ODIzOTY5&ixlib=rb-4.0.3&q=80&w=1080",
+    website: "https://www.steep.app",
+  },
+  {
+    name: "Bits.bi",
+    cofounders: "Jordan Case & Alex Hart",
+    imageUrl: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxiaXRzLmJpfGVufDB8fHx8MTcwOTgyMzk2OXww&ixlib=rb-4.0.3&q=80&w=1080",
+    website: "https://www.bits.bi",
+  },
 ];
 
 const Index = () => {
@@ -38,8 +49,12 @@ const Index = () => {
               <Heading as="h3" size="md" mb={2}>
                 {startup.name}
               </Heading>
-              <Text fontSize="sm" color="gray.500">
+              <Text fontSize="sm" color="gray.500" mb={2}>
                 Cofounders: {startup.cofounders}
+              </Text>
+              <Image src={startup.logoUrl} alt={`Logo of ${startup.name}`} boxSize="50px" objectFit="contain" mb={4} />
+              <Text as="a" href={startup.website} fontSize="sm" color="blue.500" isExternal>
+                Visit website
               </Text>
             </Box>
           ))}
